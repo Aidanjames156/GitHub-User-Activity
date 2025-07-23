@@ -6,7 +6,7 @@ def main():
         print("Usage: python useractivity.py <github-username>")
         return
     user = sys.argv[1]
-    url = f"https://api.github.com/users/{user}/events/public"
+    url = f"https://api.github.com/users/{user}/events"
     response = requests.get(url)
     if response.status_code != 200:
         print(f"Failed to fetch activity for user '{user}'. Status code: {response.status_code}")
